@@ -18,7 +18,7 @@ class LearningVocabularyRepository implements ILearningVocabularyRepository {
     await this.repository.save(vocabularyLearning);
   }
 
-  async userVocabularies(userId: string): Promise<Learning_Vocabulary[]> {
+  async listUserVocabularies(userId: string): Promise<Learning_Vocabulary[]> {
     const vocabularies = this.repository.find({
       where: {
         id: userId

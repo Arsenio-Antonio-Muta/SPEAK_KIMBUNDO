@@ -7,7 +7,7 @@ interface ICreateLearnVocabulary {
 
 interface ILearningVocabularyRepository {
   create({ userId, vocabularyId }: ICreateLearnVocabulary): Promise<void>;
-  userVocabularies(userId: string): Promise<Learning_Vocabulary[]>;
+  listUserVocabularies(userId: string): Promise<Learning_Vocabulary[]>;
 }
 
 export { ILearningVocabularyRepository, ICreateLearnVocabulary }

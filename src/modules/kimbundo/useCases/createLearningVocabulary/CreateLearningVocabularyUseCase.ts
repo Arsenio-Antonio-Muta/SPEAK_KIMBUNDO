@@ -1,5 +1,5 @@
 import { inject, injectable } from "tsyringe";
-import { ILearningVocabularyRepository } from "../../repositories/ILearningVocabularyRepository";
+import { IUserVocabularyRepository } from "../../repositories/IUserVocabularyRepository";
 
 interface IRequest {
   userId: string;
@@ -7,15 +7,15 @@ interface IRequest {
 }
 
 @injectable()
-class CreateLearningVocabularyUseCase {
+class CreateUserVocabularyUseCase {
   constructor(
     @inject("LearningVocabularyRepository")
-    private learningVocabularyRepository: ILearningVocabularyRepository
+    private userVocabularyRepository: IUserVocabularyRepository
   ) { }
 
   async execute({ userId, vocabularyId }: IRequest): Promise<void> {
-    await this.learningVocabularyRepository.create({ userId, vocabularyId });
+    await this.userVocabularyRepository.create({ userId, vocabularyId });
   }
 }
 
-export { CreateLearningVocabularyUseCase }
+export { CreateUserVocabularyUseCase }

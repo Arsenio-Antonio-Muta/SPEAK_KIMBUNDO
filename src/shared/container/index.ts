@@ -7,8 +7,8 @@ import { IExamplesVocabularyRepository } from "../../modules/kimbundo/repositori
 import { ExamplesVocabularyRepository } from "../../modules/kimbundo/repositories/implementations/ExamplesVocabularyRepository";
 import { IMeaningVocabularyRepository } from "../../modules/kimbundo/repositories/IMeaningVocabularyRepository";
 import { MeaningVocabularyRepository } from "../../modules/kimbundo/repositories/implementations/MeaningVocabularyRepository";
-import { ILearningVocabularyRepository } from "../../modules/kimbundo/repositories/ILearningVocabularyRepository";
-import { LearningVocabularyRepository } from "../../modules/kimbundo/repositories/implementations/LearningVocabularyRepository";
+import { IUserVocabularyRepository } from "../../modules/kimbundo/repositories/IUserVocabularyRepository";
+import { UserVocabularyRepository } from "../../modules/kimbundo/repositories/implementations/UserVocabularyRepository";
 
 container.registerSingleton<IVocabulariesRepository>(
   "VocabulariesRepository",
@@ -30,7 +30,7 @@ container.registerSingleton<IMeaningVocabularyRepository>(
   MeaningVocabularyRepository
 );
 
-container.registerSingleton<ILearningVocabularyRepository>(
-  "LearningVocabularyRepository",
-  LearningVocabularyRepository
+container.registerSingleton<IUserVocabularyRepository>(
+  "UserVocabularyRepository",
+  UserVocabularyRepository
 )

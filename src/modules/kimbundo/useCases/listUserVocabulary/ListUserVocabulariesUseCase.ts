@@ -1,13 +1,13 @@
 import { inject, injectable } from "tsyringe";
 import { Learning_Vocabulary } from "../../entities/Learning_Vocabulary";
-import { ILearningVocabularyRepository } from "../../repositories/ILearningVocabularyRepository";
+import { IUserVocabularyRepository } from "../../repositories/IUserVocabularyRepository";
 
 
 @injectable()
 class ListUserVocabulariesUseCase {
   constructor(
-    @inject("LearningVocabularyRepository")
-    private learningVocabularyRepository: ILearningVocabularyRepository
+    @inject("UserVocabularyRepository")
+    private learningVocabularyRepository: IUserVocabularyRepository
   ) { }
 
   async execute(user_id: string): Promise<Learning_Vocabulary[]> {

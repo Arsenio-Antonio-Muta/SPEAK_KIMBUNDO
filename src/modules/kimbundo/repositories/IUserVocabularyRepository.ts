@@ -5,9 +5,9 @@ interface ICreateLearnVocabulary {
   vocabularyId: string;
 }
 
-interface ILearningVocabularyRepository {
+interface IUserVocabularyRepository {
   create({ userId, vocabularyId }: ICreateLearnVocabulary): Promise<void>;
   listUserVocabularies(userId: string): Promise<Learning_Vocabulary[]>;
 }
 
-export { ILearningVocabularyRepository, ICreateLearnVocabulary }
+export { IUserVocabularyRepository, ICreateLearnVocabulary }

@@ -1,11 +1,9 @@
 import { getRepository, Repository } from "typeorm";
 import { Learning_Vocabulary } from "../../entities/Learning_Vocabulary";
 import { Vocabulary } from "../../entities/Vocabulary";
-import { ICreateLearnVocabulary, ILearningVocabularyRepository } from "../ILearningVocabularyRepository";
+import { ICreateLearnVocabulary, IUserVocabularyRepository, } from "../IUserVocabularyRepository";
 
-
-
-class LearningVocabularyRepository implements ILearningVocabularyRepository {
+class UserVocabularyRepository implements IUserVocabularyRepository {
   private repository: Repository<Learning_Vocabulary>
 
   constructor() {
@@ -19,15 +17,15 @@ class LearningVocabularyRepository implements ILearningVocabularyRepository {
   }
 
   async listUserVocabularies(userId: string): Promise<Learning_Vocabulary[]> {
-    const vocabularies = this.repository.find({
+    const vocabulariesUser = this.repository.find({
       where: {
         id: userId
       }
     })
 
-    return vocabularies;
+    return vocabulariesUser;
   }
 
 }
 
-export { LearningVocabularyRepository }
+export { UserVocabularyRepository }

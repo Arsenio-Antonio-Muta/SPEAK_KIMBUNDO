@@ -1,6 +1,5 @@
 import { getRepository, Repository } from "typeorm";
 import { Learning_Vocabulary } from "../../entities/Learning_Vocabulary";
-import { Vocabulary } from "../../entities/Vocabulary";
 import { ICreateLearnVocabulary, IUserVocabularyRepository, } from "../IUserVocabularyRepository";
 
 class UserVocabularyRepository implements IUserVocabularyRepository {
@@ -15,17 +14,6 @@ class UserVocabularyRepository implements IUserVocabularyRepository {
 
     await this.repository.save(vocabularyLearning);
   }
-
-  async listUserVocabularies(userId: string): Promise<Learning_Vocabulary[]> {
-    const vocabulariesUser = this.repository.find({
-      where: {
-        id: userId
-      }
-    })
-
-    return vocabulariesUser;
-  }
-
 }
 
 export { UserVocabularyRepository }

@@ -9,7 +9,7 @@ interface IRequest {
 @injectable()
 class CreateUserVocabularyUseCase {
   constructor(
-    @inject("LearningVocabularyRepository")
+    @inject("UserVocabularyRepository")
     private userVocabularyRepository: IUserVocabularyRepository
   ) { }
 

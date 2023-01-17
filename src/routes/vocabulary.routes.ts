@@ -4,7 +4,6 @@ import { CreateExamplesVocabularyController } from "../modules/kimbundo/useCases
 import { CreateLearningVocabularyController } from "../modules/kimbundo/useCases/createLearningVocabulary/CreateLearningVocabularyController";
 import { CreateMeaningVocabularyController } from "../modules/kimbundo/useCases/createMeaningVocabulary/CreateMeaningVocabularyController";
 import { CreateVocabularyController } from "../modules/kimbundo/useCases/createVocabulary/CreateVocabularyController";
-import { ListUserVocabulariesController } from "../modules/kimbundo/useCases/listUserVocabulary/ListUserVocabulariesController";
 import { ListVocabulariesController } from "../modules/kimbundo/useCases/listVocabulary/ListVocabulariesController";
 
 const vocabulariesRoutes = Router();
@@ -19,18 +18,14 @@ const createMeaningVocabularyController = new CreateMeaningVocabularyController(
 
 const createVocabularyLearningController = new CreateLearningVocabularyController();
 
-const listUserVocabulariesController = new ListUserVocabulariesController();
-
 vocabulariesRoutes.post("/", ensureAuthenticated, createVocabulariesController.handle);
 
 vocabulariesRoutes.get("/", listVocabulariesController.handle);
 
-vocabulariesRoutes.post("/example", createExamplesVocabularyController.handle);
+vocabulariesRoutes.post("/example", ensureAuthenticated, createExamplesVocabularyController.handle);
 
-vocabulariesRoutes.post("/meaning", createMeaningVocabularyController.handle);
+vocabulariesRoutes.post("/meaning", ensureAuthenticated, createMeaningVocabularyController.handle);
 
 vocabulariesRoutes.post("/learning", createVocabularyLearningController.handle);
-
-vocabulariesRoutes.get("/user", ensureAuthenticated, listUserVocabulariesController.handle);
 
 export { vocabulariesRoutes }

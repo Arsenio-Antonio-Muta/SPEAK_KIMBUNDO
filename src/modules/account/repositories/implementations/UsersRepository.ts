@@ -26,6 +26,16 @@ class UsersRepository implements IUsersRepository {
     return user;
   }
 
+  async findVocabulariesUser(user_id: string): Promise<User[]> {
+    const vocabulariesUser = await this.repository.find({
+      where: {
+        id: user_id
+      },
+      relations: ["learning_vocabulary"]
+    })
+
+    return vocabulariesUser
+  }
 }
 
 export { UsersRepository }

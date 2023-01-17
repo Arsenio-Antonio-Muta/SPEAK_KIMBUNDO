@@ -15,7 +15,7 @@ class Learning_Vocabulary {
   @CreateDateColumn({ name: "updated_At" })
   updatedAt: Date;
 
-  @ManyToOne(() => Vocabulary, (vocabulary) => vocabulary.learning_vocabulary)
+  @ManyToOne(() => Vocabulary, (vocabulary) => vocabulary.learning_vocabulary, { eager: true })
   vocabulary: Vocabulary;
 
   @ManyToOne(() => User, (user) => user.learning_vocabulary)

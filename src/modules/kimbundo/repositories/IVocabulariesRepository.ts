@@ -7,7 +7,7 @@ interface ICreateVocabularyDTO {
 interface IVocabulariesRepository {
   create({ word }: ICreateVocabularyDTO): Promise<void>;
   list(): Promise<Vocabulary[]>;
-  findByVocabulary(vocabulary: string): Promise<Vocabulary>
+  findByVocabulary(word: string): Promise<Vocabulary>
 }
 
 export { IVocabulariesRepository, ICreateVocabularyDTO }

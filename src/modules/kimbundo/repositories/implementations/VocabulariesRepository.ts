@@ -24,8 +24,8 @@ class VocabulariesRepository implements IVocabulariesRepository {
     return findAllVocabularies;
   }
 
-  async findByVocabulary(vocabulary: string): Promise<Vocabulary> {
-    const findOneWord = this.repository.findOne(vocabulary);
+  async findByVocabulary(word: string): Promise<Vocabulary> {
+    const findOneWord = this.repository.findOne(word);
 
     return findOneWord;
   }

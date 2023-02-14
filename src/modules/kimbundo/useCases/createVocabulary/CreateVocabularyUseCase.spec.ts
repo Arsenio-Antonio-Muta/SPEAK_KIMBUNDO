@@ -1,4 +1,4 @@
-import { AppError } from "../../../../errors/AppError";
+import { AppError } from "../../../../shared/errors/AppError";
 import { VocabulariesRepositoryInMemory } from "../../repositories/in-memory/VocabulariesRepositoryInMemory";
 import { CreateVocabularyUseCase } from "./CreateVocabularyUseCase"
 

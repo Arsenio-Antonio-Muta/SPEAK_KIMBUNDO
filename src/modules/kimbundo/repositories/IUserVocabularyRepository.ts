@@ -1,4 +1,4 @@
-import { Learning_Vocabulary } from "../entities/Learning_Vocabulary";
+import { Learning_Vocabulary } from "../infra/typeorm/entities/Learning_Vocabulary";
 
 interface ICreateLearnVocabulary {
   userId: string;

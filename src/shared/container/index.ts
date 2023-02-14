@@ -1,10 +1,10 @@
 import { container } from "tsyringe";
-import { UsersRepository } from "../../modules/account/repositories/implementations/UsersRepository";
+import { UsersRepository } from "../../modules/account/infra/repositories/UsersRepository";
 import { IUsersRepository } from "../../modules/account/repositories/IUsersRepository";
 import { VocabulariesRepository } from "../../modules/kimbundo/repositories/implementations/VocabulariesRepository";
 import { IVocabulariesRepository } from "../../modules/kimbundo/repositories/IVocabulariesRepository";
 import { IExamplesVocabularyRepository } from "../../modules/kimbundo/repositories/IExamplesVocabularyRepository";
-import { ExamplesVocabularyRepository } from "../../modules/kimbundo/repositories/implementations/ExamplesVocabularyRepository";
+import { ExamplesVocabularyRepository } from "../../modules/kimbundo/infra/repositories/ExamplesVocabularyRepository";
 import { IMeaningVocabularyRepository } from "../../modules/kimbundo/repositories/IMeaningVocabularyRepository";
 import { MeaningVocabularyRepository } from "../../modules/kimbundo/repositories/implementations/MeaningVocabularyRepository";
 import { IUserVocabularyRepository } from "../../modules/kimbundo/repositories/IUserVocabularyRepository";

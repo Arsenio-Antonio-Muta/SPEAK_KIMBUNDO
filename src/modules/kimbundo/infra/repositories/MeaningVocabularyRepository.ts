@@ -1,5 +1,5 @@
 import { getRepository, Repository } from "typeorm";
-import { Meaning } from "../../entities/Meaning";
+import { Meaning } from "../../infra/typeorm/entities/Meaning";
 import { ICreateMeaningDTO, IMeaningVocabularyRepository } from "../IMeaningVocabularyRepository";
 
 

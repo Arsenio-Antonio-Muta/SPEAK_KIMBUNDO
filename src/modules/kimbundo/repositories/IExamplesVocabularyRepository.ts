@@ -1,4 +1,4 @@
-import { Example } from "../entities/Example";
+import { Example } from "../infra/typeorm/entities/Example";
 
 interface ICreateExampleDTO {
   example: string;

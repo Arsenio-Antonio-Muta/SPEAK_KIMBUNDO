@@ -1,6 +1,6 @@
 import { getRepository, Repository } from "typeorm";
-import { Example } from "../../entities/Example";
-import { ICreateExampleDTO, IExamplesVocabularyRepository } from "../IExamplesVocabularyRepository";
+import { Example } from "../typeorm/entities/Example";
+import { ICreateExampleDTO, IExamplesVocabularyRepository } from "../../repositories/IExamplesVocabularyRepository";
 
 
 class ExamplesVocabularyRepository implements IExamplesVocabularyRepository {

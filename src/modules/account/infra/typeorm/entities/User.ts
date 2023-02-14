@@ -1,6 +1,6 @@
 import { Column, Entity, OneToMany, PrimaryColumn } from "typeorm";
 import { v4 as uuidV4 } from "uuid";
-import { Learning_Vocabulary } from "../../kimbundo/entities/Learning_Vocabulary";
+import { Learning_Vocabulary } from "../../../../kimbundo/infra/typeorm/entities/Learning_Vocabulary";
 
 @Entity("users")
 class User {

@@ -1,4 +1,4 @@
-import { Vocabulary } from "../../entities/Vocabulary";
+import { Vocabulary } from "../../infra/typeorm/entities/Vocabulary";
 import { ICreateVocabularyDTO, IVocabulariesRepository } from "../IVocabulariesRepository";
 
 

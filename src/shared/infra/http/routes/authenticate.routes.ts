@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { CreateAuthenticateUserController } from "../modules/account/useCases/createAuthenticateUser/CreateAuthenticateUserController";
+import { CreateAuthenticateUserController } from "../../../../modules/account/useCases/createAuthenticateUser/CreateAuthenticateUserController";
 
 
 

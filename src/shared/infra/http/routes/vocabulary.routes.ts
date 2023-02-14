@@ -1,10 +1,10 @@
 import { Router } from "express";
 import { ensureAuthenticated } from "../middleware/ensureAuthenticated";
-import { CreateExamplesVocabularyController } from "../modules/kimbundo/useCases/createExampleVocabulary/CreateExampleVocabularyController";
-import { CreateLearningVocabularyController } from "../modules/kimbundo/useCases/createLearningVocabulary/CreateLearningVocabularyController";
-import { CreateMeaningVocabularyController } from "../modules/kimbundo/useCases/createMeaningVocabulary/CreateMeaningVocabularyController";
-import { CreateVocabularyController } from "../modules/kimbundo/useCases/createVocabulary/CreateVocabularyController";
-import { ListVocabulariesController } from "../modules/kimbundo/useCases/listVocabulary/ListVocabulariesController";
+import { CreateExamplesVocabularyController } from "../../../../modules/kimbundo/useCases/createExampleVocabulary/CreateExampleVocabularyController";
+import { CreateLearningVocabularyController } from "../../../../modules/kimbundo/useCases/createLearningVocabulary/CreateLearningVocabularyController";
+import { CreateMeaningVocabularyController } from "../../../../modules/kimbundo/useCases/createMeaningVocabulary/CreateMeaningVocabularyController";
+import { CreateVocabularyController } from "../../../../modules/kimbundo/useCases/createVocabulary/CreateVocabularyController";
+import { ListVocabulariesController } from "../../../../modules/kimbundo/useCases/listVocabulary/ListVocabulariesController";
 
 const vocabulariesRoutes = Router();
 

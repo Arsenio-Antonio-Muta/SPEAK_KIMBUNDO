@@ -1,5 +1,5 @@
 import { inject, injectable } from "tsyringe";
-import { Vocabulary } from "../../entities/Vocabulary";
+import { Vocabulary } from "../../infra/typeorm/entities/Vocabulary";
 import { IVocabulariesRepository } from "../../repositories/IVocabulariesRepository";
 
 @injectable()

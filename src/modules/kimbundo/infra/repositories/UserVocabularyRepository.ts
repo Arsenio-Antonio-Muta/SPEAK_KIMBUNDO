@@ -1,5 +1,5 @@
 import { getRepository, Repository } from "typeorm";
-import { Learning_Vocabulary } from "../../entities/Learning_Vocabulary";
+import { Learning_Vocabulary } from "../../infra/typeorm/entities/Learning_Vocabulary";
 import { ICreateLearnVocabulary, IUserVocabularyRepository, } from "../IUserVocabularyRepository";
 
 class UserVocabularyRepository implements IUserVocabularyRepository {

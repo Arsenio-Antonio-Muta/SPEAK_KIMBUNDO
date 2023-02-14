@@ -1,6 +1,6 @@
 import { CreateDateColumn, Entity, ManyToOne, PrimaryColumn } from "typeorm";
 import { v4 as uuidV4 } from "uuid";
-import { User } from "../../account/entities/User";
+import { User } from "../../../../account/infra/typeorm/entities/User";
 import { Vocabulary } from "./Vocabulary";
 
 

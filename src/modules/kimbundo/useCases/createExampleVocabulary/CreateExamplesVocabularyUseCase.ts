@@ -1,5 +1,5 @@
 import { inject, injectable } from "tsyringe";
-import { Example } from "../../entities/Example";
+import { Example } from "../../infra/typeorm/entities/Example";
 import { IExamplesVocabularyRepository } from "../../repositories/IExamplesVocabularyRepository";
 
 interface IRequest {
